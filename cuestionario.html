@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        h1 {
+            font-size: 25px;
+            color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {background-color: antiquewhite;}
+        label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de información</h1>
+    <form action="/procesa.php" method="post">
+    <fieldset>
+        <legend>Sus datos</legend>
+        <label for="Name">Nombre y apellidos:</label> 
+            <input type="text" id="Name" name="Name" value="" maxlength="50"> <br><br>
+        <label for="contrase">Contraseña:</label>
+            <input type="password" name="contrasena" id="contrase" maxlength="8"> <br><br>
+        <label for="usuario">Usuario:</label>
+            <input type="text" name="usuario" value="anónimo" id="usuario" disabled><br> <br>
+        <label for="nivel">Nivel:</label> <br> <br>
+            <input type="radio" name="nivel" id="nivel" value="prof">Profesional <br>
+            <input type="radio" name="nivel" id="nivel" value="avanz" checked>Avanzado <br>
+            <input type="radio" name="nivel" id="nivel" value="princ" >Principiante <br><br>
+    </fieldset> <br>
+    <label for="nacion">Nacionalidad:</label>
+        <select name="nacionalidad" id="nacion">
+            <option value="esp">España</option>
+            <option value="fran">Francia</option>
+            <option value="port">Portugal</option> 
+            </select><br><br>
+    <label for="descrip">Descripción:</label>
+        <textarea name="descripcion" id="descrip" value=""></textarea> <br> <br>
+    <label for="deseo"></label> 
+        <input type="checkbox" name="deseo" id="deseo" checked>Deseo recibir información sobre novedades y ofertas <br>
+        <label for="declaro"></label> 
+        <input type="checkbox" name="declaro" id="declaro">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos.<br> <br>
+    <label for="foto">Adjuntar foto:</label>
+        <input type="file" id="foto" name="foto"> <br> <br>
+    <input type="submit" value="Enviar datos">
+    <input type="reset" value="Borrar datos"> 
+</form>
+</body>
+</html>
